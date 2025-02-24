@@ -1,0 +1,307 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* Texto blanco para contrastar con el fondo oscuro */
+    background-image: url('../img/Fondo.jpg'); /* Cambia esto por la ruta de tu imagen */
+    background-attachment: fixed; /* Fondo fijo */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header fijo */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Contenido principal */
+main {
+    padding-top: 80px; /* Espacio para el header fijo */
+    padding-bottom: 40px; /* Espacio para el footer */
+}
+
+/* Título principal */
+#titulo {
+    text-align: center;
+    padding: 20px;
+}
+
+#titulo h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+
+/* Estilos para la introducción */
+.introduccion {
+    text-align: justify; /* Alineación a la izquierda */
+    font-size: 20px;
+    margin: 0; /* Eliminar margen automático */
+    padding: 0 20px; /* Añadir un poco de padding para no pegarse al borde */
+}
+
+/* Secciones */
+section {
+    margin: 40px 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para las secciones */
+    border-radius: 10px;
+}
+
+section h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.subseccion {
+    margin-bottom: 20px;
+}
+
+.subseccion h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.subseccion p {
+    font-size: 16px;
+}
+
+/* Estilos para el contenedor de la imagen y el carrusel */
+.contenedor-imagen-carrusel {
+    display: flex;
+    gap: 20px; /* Espacio entre la imagen y el carrusel */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    align-items: flex-start; /* Alinear elementos en la parte superior */
+}
+
+/* Estilos para la imagen fija */
+.imagen-fija {
+    flex: 1; /* Ocupa 1 parte del espacio disponible */
+    border: 5px solid white; /* Borde blanco */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+   
+}
+
+.imagen-fija img {
+    width: 100%;
+    display: block;
+}
+
+/* Estilos para el carrusel (más grande) */
+.carrusel {
+    flex: 2; /* Ocupa 2 partes del espacio disponible (más grande que la imagen) */
+    border: 5px solid white; /* Borde blanco */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.carrusel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carrusel-imagenes img {
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+}
+
+.carrusel-anterior,
+.carrusel-siguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 100;
+}
+
+.carrusel-anterior {
+    left: 10px;
+}
+
+.carrusel-siguiente {
+    right: 10px;
+}
+
+.carrusel-anterior:hover,
+.carrusel-siguiente:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para el carrusel de la sección de avión */
+#modelado-avion .carrusel {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 5px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+#modelado-avion .carrusel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+#modelado-avion .carrusel-imagenes img {
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+}
+
+#modelado-avion .carrusel-anterior,
+#modelado-avion .carrusel-siguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 100;
+}
+
+#modelado-avion .carrusel-anterior {
+    left: 10px;
+}
+
+#modelado-avion .carrusel-siguiente {
+    right: 10px;
+}
+
+#modelado-avion .carrusel-anterior:hover,
+#modelado-avion .carrusel-siguiente:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para las imágenes de texturizado */
+.contenedor-imagenes-texturizado {
+    display: flex;
+    gap: 20px; /* Espacio entre las imágenes */
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.contenedor-imagenes-texturizado img {
+    width: 48%; /* Cada imagen ocupa la mitad del espacio */
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el carrusel de Objetos Varios (más pequeño) */
+.subseccion#objetos-varios .carrusel {
+    flex: 1; /* Ocupa 1 parte del espacio disponible (igual que la imagen) */
+    max-width: 800px; /* Ancho máximo para que sea más pequeño */
+    margin: 0 auto; /* Centrar el carrusel */
+}
+
+
+/* Estilos para la sección de Modelado 3D Blender */
+#modelado-blender .contenedor-video-imagen {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna (uno encima del otro) */
+    gap: 20px; /* Espacio entre la imagen y el video */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+#modelado-blender .imagen-fija,
+#modelado-blender .video-container {
+    width: 100%; /* Ambos ocupan el 100% del ancho del contenedor */
+    height: 400px; /* Altura fija para ambos */
+    border: 5px solid white;
+    border-radius: 10px;
+    overflow: hidden; /* Oculta el desbordamiento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative; /* Para centrar el contenido */
+}
+
+#modelado-blender .imagen-fija img {
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+    height: 100%; /* La imagen ocupa el 100% de la altura del contenedor */
+    object-fit: contain; /* Ajusta la imagen para que se vea completa sin recortarse */
+    display: block;
+}
+
+#modelado-blender video {
+    width: 100%; /* El video ocupa el 100% del ancho del contenedor */
+    height: 100%; /* El video ocupa el 100% de la altura del contenedor */
+    object-fit: cover; /* Ajusta el video para cubrir el contenedor sin distorsionarse */
+    display: block;
+}
+
+/* Estilos para las descripciones */
+.descripcion {
+    margin-top: 10px; /* Espacio entre el subtítulo y la descripción */
+    margin-bottom: 20px; /* Espacio entre la descripción y el carrusel/video */
+    font-size: 16px;
+    color: white;
+    text-align: left; /* Alineación a la izquierda */
+    margin-left: 0; /* Alineación a la izquierda */
+    
+}
+
+/* Estilos para el contenedor del video */
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 5px solid white; /* Borde blanco */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+
+/* Estilos para los enlaces */
+a {
+    color: #1e90ff; /* Color azul para el enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
